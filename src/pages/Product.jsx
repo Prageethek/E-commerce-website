@@ -2,11 +2,12 @@ import React, { useContext, useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/frontend_assets/assets';
+import RelatedProducts from '../components/RelatedProducts';
 
 export const Product = () => {
 
 const {productId} =useParams();
-const {products,currency}=useContext(ShopContext)
+const {products,currency,addToCart}=useContext(ShopContext)
 const[productData,setProductData]=useState(false)
 const[image,setImage]=useState('')
 const[size,setSize]=useState('')
@@ -52,11 +53,11 @@ productData.image.map((item,index)=>(
 <div className='flex-1'>
 <h1 className='font-medium text-2xl mt-2 '>{productData.name}</h1>
 <div className='flex items-center gap-1 mt-2'> 
-<img src={assets.star_icon} alt="" class="w-3 5"/>
-<img src={assets.star_icon} alt="" class="w-3 5"/>
-<img src={assets.star_icon} alt="" class="w-3 5"/>
-<img src={assets.star_icon} alt="" class="w-3 5"/>
-<img src={assets.star_dull_icon} alt="" class="w-3 5"/>
+<img src={assets.star_icon} alt="" className="w-3 5"/>
+<img src={assets.star_icon} alt="" className="w-3 5"/>
+<img src={assets.star_icon} alt="" className="w-3 5"/>
+<img src={assets.star_icon} alt="" className="w-3 5"/>
+<img src={assets.star_dull_icon} alt="" className="w-3 5"/>
 <p className='pl-2'>(122)</p>
 </div>
 <p className='mt-5 font-medium text-3xl'>{currency}{productData.price}</p>
@@ -70,20 +71,16 @@ productData.image.map((item,index)=>(
   ))}
 </div>
 </div>
-<button className='bg-black text-white px-10 py-3 text-sm active:bg-gray-700 cursor-pointer'>ADD TO CART</button>
+<button onClick={()=>addToCart(productData._id,size)} className='bg-black text-white px-10 py-3 text-sm active:bg-gray-700 cursor-pointer'>ADD TO CART</button>
 <hr className='mt-8 sm:w-4/5'/>
 <div className='text-sm text-gray-400 flex flex-col mt-4 gap-1'>
 <p>100% Original products</p>
 <p>Cash on delivery is on this product.</p>
 <p>Easy return and exchange policy within 7 days</p>
 </div>
-
-<div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
-<p></p>
+</div>
 </div>
 
-</div>
-</div>
 
 {/* ----------Description & Review section------------- */}
 
@@ -92,9 +89,17 @@ productData.image.map((item,index)=>(
 <b className='border px-5 py-3 text-sm'>Description</b>
 <p className='border px-5 py-3 text-sm'>Review(122)</p>
   </div>
-
+<div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+<p>An e-commerce website is an online platform that facilitates the buying and selling of products or services over the internet. It serves as a virtual marketplace where businesses and individuals can
+showcase their products, interact with customers, and conduct transactions without the need for a physical presence. E-commerce websites have gained immense popularity due to their
+convenience, accessibility, and the global reach they offer. </p>
+<p>E-commerce websites typically display products or services along with detailed descriptions, images, prices, and any available variations (e.g., sizes, colors). Each product usually has its own
+dedicated page with relevant information.</p>
+</div>
 </div>
 
+{/* --------------Display related products---------- */}
+<RelatedProducts category={productData.category} subCategory={productData.subCategory}/>
     </div>
   ) : <div className='opacity-0'></div>
 }
