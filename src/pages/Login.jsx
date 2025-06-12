@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
 import { Form } from 'react-router-dom'
+import { ShopContext } from '../context/ShopContext'
 
 export const Login = () => {
   
-const [currentState,setCurrentState] = useState('Login')
+const [currentState, setCurrentState] = useState('Login')
+const { token, setToken, navigate, backendUrl } = useContext(ShopContext)
+
 const onSubmitHandler = async (event) =>{
 event.preventDefault();
 }
