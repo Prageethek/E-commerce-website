@@ -14,7 +14,7 @@ const Verify = () => {
   //get the success and userId from the url
   
   const success = searchParams.get('success')
-  const orderId = searchParams.get('orderID')
+  const orderId = searchParams.get('orderId')
 
   console.log('success:', success, 'orderId:', orderId);
 
