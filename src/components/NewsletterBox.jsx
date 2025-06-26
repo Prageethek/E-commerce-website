@@ -7,7 +7,7 @@ const onSubmitHandler=(event)=>{
 
 
 
-const NewsLetterBox = () => {
+const NewsletterBox = () => {
   return (
     <div className='  text-center'>
 
@@ -24,4 +24,4 @@ const NewsLetterBox = () => {
   )
 }
 
-export default NewsLetterBox
+export default NewsletterBox
