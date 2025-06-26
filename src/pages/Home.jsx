@@ -10,7 +10,7 @@ export const Home = () => {
     <div>
       <Hero/>
       <LatestCollection/>
-      <Bestseller/>
+      <BestSeller/>
       <OurPolicy/>
       <NewsLetterBox/>
     </div>
