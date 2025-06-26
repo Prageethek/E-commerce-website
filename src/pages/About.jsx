@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/frontend_assets/assets'
-import NewsletterBox from '../components/NewsletterBox.jsx'
+import NewsLetterBox from '../components/NewsLetterBox.jsx'
 
 export const About = () => {
   return (
@@ -53,7 +53,7 @@ top priority.</p>
 
 </div>
 
-<NewsletterBox/>
+<NewsLetterBox/>
 
     </div>
   )
