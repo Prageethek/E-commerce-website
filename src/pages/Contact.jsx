@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/frontend_assets/assets'
-import NewsLetterBox from '../components/NewsLetterBox'
+import NewsletterBox from '../components/NewsletterBox'
 
 export const Contact = () => {
   return (
@@ -22,7 +22,7 @@ export const Contact = () => {
 <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explore Jobs</button>
 </div>
 </div>
-<NewsLetterBox/>
+<NewsletterBox/>
     </div>
   )
 }
