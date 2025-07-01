@@ -37,6 +37,8 @@ else
   }
 }
 
+
+
 const applyFilter=()=>{
 
   let productsCopy=products.slice()
