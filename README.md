@@ -1,12 +1,7 @@
-# React + Vite
+🛍️ Clothing Store - MERN E-commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN e-commerce application for a clothing store, built with MongoDB, Express.js, React.js, and Node.js.
+The project allows users to browse collections, add products to their cart, place orders with Stripe payments, and securely log in using JWT authentication.
+All product images are stored and delivered via Cloudinary for fast and optimized loading.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This repository contains the frontend of the application, built with React, React Router, and Context API for state management.
